@@ -13,10 +13,10 @@ const Hero = () => {
           className="flex-1"
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            Hi, I'm <span className="text-blue-600 dark:text-blue-400">Your Name</span>
+            Hi, I'm <span className="text-blue-600 dark:text-blue-400">Bazley Tan</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8">
-            A passionate full-stack developer crafting beautiful and functional web experiences
+            I love bringing ideas to life through clean, user-friendly designs in Figma and building simple but effective systems with PHP. I also enjoy the hands-on side of tech—whether it’s crimping cables or setting up routers.
           </p>
           <div className="flex gap-4">
             <a
