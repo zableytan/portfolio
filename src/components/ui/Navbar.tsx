@@ -15,7 +15,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             className="flex-shrink-0 font-bold text-xl"
           >
-            Your Name
+            Bazley Tan's Portfolio
           </motion.div>
           
           <div className="hidden sm:block">
