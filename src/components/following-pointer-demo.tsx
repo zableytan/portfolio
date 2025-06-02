@@ -138,21 +138,3 @@ export default function FollowingPointerDemo() {
   );
 }
 
-const TitleComponent = ({
-  title,
-  avatar,
-}: {
-  title: string;
-  avatar: string;
-}) => (
-  <div className="flex items-center space-x-2">
-    <img
-      src={avatar}
-      height="20"
-      width="20"
-      alt={`${title}'s avatar`}
-      className="rounded-full border-2 border-white w-5 h-5 sm:w-6 sm:h-6"
-    />
-    <p className="text-white text-sm sm:text-base">{title}</p>
-  </div>
-);
