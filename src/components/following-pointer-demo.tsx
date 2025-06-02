@@ -52,7 +52,7 @@ export default function FollowingPointerDemo() {
       link: "https://example.com/verification-system",
     },
     {
-      slug: "fullstack-development",
+      slug: "fullstack-development-question-shuffler", // Changed slug
       author: "Bazley Tan",
       date: "26th May, 2025",
       title: "Question Shuffler System",
@@ -64,7 +64,7 @@ export default function FollowingPointerDemo() {
       link: "https://example.com/question-shuffler",
     },
     {
-      slug: "fullstack-development",
+      slug: "fullstack-development-theses-library", // Changed slug
       author: "Bazley Tan",
       date: "26th May, 2025",
       title: "Theses Library",
@@ -78,10 +78,10 @@ export default function FollowingPointerDemo() {
   ];
 
   return (
-    <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl px-4">
-      {contents.map((content, index) => (
+    <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 max-w-7xl px-2 sm:px-4">
+      {contents.map((content) => (
         <FollowerPointerCard
-          key={index}
+          key={content.slug}
           title={
             <TitleComponent
               title={content.author}
@@ -89,40 +89,43 @@ export default function FollowingPointerDemo() {
             />
           }
         >
-          <div className="group relative h-full overflow-hidden rounded-2xl border border-zinc-100 bg-white transition duration-200 hover:shadow-xl dark:bg-gray-800 dark:border-gray-700">
-            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-tl-lg rounded-tr-lg bg-gray-100">
+          <div className="group relative h-full overflow-hidden rounded-lg sm:rounded-2xl border border-zinc-100 bg-white transition duration-200 hover:shadow-xl dark:bg-gray-800 dark:border-gray-700">
+            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-lg sm:rounded-t-2xl bg-gray-100">
               <img
                 src={content.image}
-                alt="thumbnail"
-                className="h-full transform object-cover transition duration-200 group-hover:scale-95 group-hover:rounded-2xl"
+                alt={content.title}
+                width={400}
+                height={250}
+                className="h-full w-full transform object-cover transition duration-200 group-hover:scale-95 group-hover:rounded-2xl"
+                loading="lazy"
               />
             </div>
-            <div className="p-4">
-              <h2 className="my-4 text-lg font-bold text-zinc-700 dark:text-zinc-100">
+            <div className="p-3 sm:p-4">
+              <h2 className="my-2 sm:my-4 text-base sm:text-lg font-bold text-zinc-700 dark:text-zinc-100">
                 {content.title}
               </h2>
-              <h2 className="my-4 text-sm font-normal text-zinc-500 dark:text-zinc-400">
+              <h2 className="my-2 sm:my-4 text-xs sm:text-sm font-normal text-zinc-500 dark:text-zinc-400 line-clamp-3">
                 {content.description}
               </h2>
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                 {content.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300"
+                    className="px-2 sm:px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-              <div className="mt-10 flex flex-row items-center justify-between">
-                <span className="text-sm text-gray-500 dark:text-gray-400">
+              <div className="mt-6 sm:mt-10 flex flex-row items-center justify-between">
+                <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                   {content.date}
                 </span>
                 <a
                   href={content.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative z-10 block rounded-xl bg-black px-6 py-2 text-xs font-bold text-white hover:bg-gray-800 transition-colors"
+                  className="relative z-10 block rounded-lg sm:rounded-xl bg-black px-4 sm:px-6 py-1.5 sm:py-2 text-xs font-bold text-white hover:bg-gray-800 transition-colors active:scale-95"
                 >
                   Open Project
                 </a>
@@ -147,9 +150,9 @@ const TitleComponent = ({
       src={avatar}
       height="20"
       width="20"
-      alt="thumbnail"
-      className="rounded-full border-2 border-white"
+      alt={`${title}'s avatar`}
+      className="rounded-full border-2 border-white w-5 h-5 sm:w-6 sm:h-6"
     />
-    <p className="text-white">{title}</p>
+    <p className="text-white text-sm sm:text-base">{title}</p>
   </div>
 );
