@@ -8,8 +8,7 @@ export default function FollowingPointerDemo() {
       author: "Bazley Tan",
       date: "February, 2025",
       title: "Library Stats System",
-      description:
-        "The Library Stats System is a web-based tool that tracks and displays how many students click on library resource links. It helps administrators monitor engagement and identify the most accessed materials for better resource planning.",
+      description: "The Library Stats System is a web-based tool that tracks and displays how many students click on library resource links...",
       image: "/libstats.png",
       authorAvatar: "/profile.jpg",
       technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
@@ -20,8 +19,7 @@ export default function FollowingPointerDemo() {
       author: "Bazley Tan",
       date: "29th May, 2025",
       title: "Quotation System",
-      description:
-        "A web-based platform that lets customers easily request quotations and allows staff to file leave requests, which can be approved by admins for smoother and more efficient operations.",
+      description: "A web-based platform that lets customers easily request quotations and allows staff to file leave requests, which can be approved by admins for smoother and more efficient operations.",
       image: "/quotationsystem.png",
       authorAvatar: "/profile.jpg",
       technologies: ["PHP", "MySQL", "jQuery", "HTML/CSS", "Tailwind CSS"],
@@ -32,9 +30,8 @@ export default function FollowingPointerDemo() {
       author: "Bazley Tan",
       date: "28th May, 2025",
       title: "Event Attendance",
-      description:
-        "A QR code-based event attendance system that allows students to quickly scan their unique codes for efficient and accurate attendance tracking during school events.",
-      image: "eventatt.png",
+      description: "A QR code-based event attendance system that allows students to quickly scan their unique codes for efficient and accurate attendance tracking during school events.",
+      image: "/eventatt.png",
       authorAvatar: "/profile.jpg",
       technologies: ["PHP", "MySQL", "QR Code API", "JavaScript", "Tailwind CSS"],
       link: "https://github.com/zableytan/event_attendance",
@@ -44,32 +41,29 @@ export default function FollowingPointerDemo() {
       author: "Bazley Tan",
       date: "27th May, 2025",
       title: "Verification System",
-      description:
-        "A simple verification system that allows users to enter their application number to check and confirm their validity or application status. Designed for fast and secure verification with minimal user input.",
-      image: "verification.png",
+      description: "A simple verification system that allows users to enter their application number to check and confirm their validity or application status. Designed for fast and secure verification with minimal user input.",
+      image: "/verification.png",
       authorAvatar: "/profile.jpg",
       technologies: ["PHP", "MySQL", "AJAX", "Bootstrap", "Tailwind CSS"],
       link: "https://example.com/verification-system",
     },
     {
-      slug: "fullstack-development-question-shuffler", // Changed slug
+      slug: "fullstack-development-question-shuffler",
       author: "Bazley Tan",
       date: "26th May, 2025",
       title: "Question Shuffler System",
-      description:
-        "Developed a Question Shuffler System that allows users to upload exam questions in a predefined format and automatically generates randomized question sets for secure and varied exam creation.",
+      description: "Developed a Question Shuffler System that allows users to upload exam questions in a predefined format and automatically generates randomized question sets for secure and varied exam creation.",
       image: "/question.png",
       authorAvatar: "/profile.jpg",
       technologies: ["PHP", "MySQL", "JavaScript", "Excel Processing", "Bootstrap"],
       link: "https://example.com/question-shuffler",
     },
     {
-      slug: "fullstack-development-theses-library", // Changed slug
+      slug: "fullstack-development-theses-library",
       author: "Bazley Tan",
       date: "26th May, 2025",
       title: "Theses Library",
-      description:
-        "A thesis library system designed for students to search and access thesis PDFs, with secure access control through admin-generated passwords to ensure restricted and authorized viewing.",
+      description: "A thesis library system designed for students to search and access thesis PDFs, with secure access control through admin-generated passwords to ensure restricted and authorized viewing.",
       image: "/theses.png",
       authorAvatar: "/profile.jpg",
       technologies: ["PHP", "MySQL", "PDF.js", "JavaScript", "Tailwind CSS"],
@@ -89,8 +83,8 @@ export default function FollowingPointerDemo() {
             />
           }
         >
-          <div className="group relative h-full overflow-hidden rounded-lg sm:rounded-2xl border border-zinc-100 bg-white transition duration-200 hover:shadow-xl dark:bg-gray-800 dark:border-gray-700">
-            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-lg sm:rounded-t-2xl bg-gray-100">
+          <div className="group relative h-full overflow-hidden rounded-lg sm:rounded-2xl border border-[#EAEFEF] bg-[#EAEFEF] transition duration-200 hover:shadow-xl dark:bg-[#333446] dark:border-[#7F8CAA]">
+            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-lg sm:rounded-t-2xl bg-[#B8CFCE]">
               <img
                 src={content.image}
                 alt={content.title}
@@ -101,31 +95,31 @@ export default function FollowingPointerDemo() {
               />
             </div>
             <div className="p-3 sm:p-4">
-              <h2 className="my-2 sm:my-4 text-base sm:text-lg font-bold text-zinc-700 dark:text-zinc-100">
+              <h2 className="my-2 sm:my-4 text-base sm:text-lg font-bold text-[#333446] dark:text-[#EAEFEF]">
                 {content.title}
               </h2>
-              <h2 className="my-2 sm:my-4 text-xs sm:text-sm font-normal text-zinc-500 dark:text-zinc-400 line-clamp-3">
+              <h2 className="my-2 sm:my-4 text-xs sm:text-sm font-normal text-[#7F8CAA] dark:text-[#B8CFCE]">
                 {content.description}
               </h2>
               <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                 {content.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-2 sm:px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300"
+                    className="px-2 sm:px-3 py-1 text-xs font-medium rounded-full bg-[#B8CFCE] text-[#333446] dark:bg-[#7F8CAA] dark:text-[#EAEFEF]"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
               <div className="mt-6 sm:mt-10 flex flex-row items-center justify-between">
-                <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+                <span className="text-xs sm:text-sm text-[#7F8CAA] dark:text-[#B8CFCE]">
                   {content.date}
                 </span>
                 <a
                   href={content.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative z-10 block rounded-lg sm:rounded-xl bg-black px-4 sm:px-6 py-1.5 sm:py-2 text-xs font-bold text-white hover:bg-gray-800 transition-colors active:scale-95"
+                  className="relative z-10 block rounded-lg sm:rounded-xl bg-[#333446] px-4 sm:px-6 py-1.5 sm:py-2 text-xs font-bold text-[#EAEFEF] hover:bg-[#7F8CAA] transition-colors active:scale-95"
                 >
                   Open Project
                 </a>
@@ -137,4 +131,23 @@ export default function FollowingPointerDemo() {
     </div>
   );
 }
+
+const TitleComponent = ({
+  title,
+  avatar,
+}: {
+  title: string;
+  avatar: string;
+}) => (
+  <div className="flex items-center space-x-2">
+    <img
+      src={avatar}
+      height="20"
+      width="20"
+      alt={`${title}'s avatar`}
+      className="rounded-full border-2 border-[#EAEFEF] w-5 h-5 sm:w-6 sm:h-6"
+    />
+    <p className="text-[#EAEFEF] text-sm sm:text-base">{title}</p>
+  </div>
+);
 
