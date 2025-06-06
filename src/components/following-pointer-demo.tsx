@@ -83,8 +83,8 @@ export default function FollowingPointerDemo() {
             />
           }
         >
-          <div className="group relative h-full overflow-hidden rounded-lg sm:rounded-2xl border border-[#EAEFEF] bg-[#EAEFEF] transition duration-200 hover:shadow-xl dark:bg-[#333446] dark:border-[#7F8CAA]">
-            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-lg sm:rounded-t-2xl bg-[#B8CFCE]">
+          <div className="group relative h-full overflow-hidden rounded-lg sm:rounded-2xl border border-[#F5EFE7] bg-[#F5EFE7] transition duration-200 hover:shadow-xl dark:bg-[#213555] dark:border-[#3E5879] flex flex-col">
+            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-lg sm:rounded-t-2xl bg-[#D8C4B6]">
               <img
                 src={content.image}
                 alt={content.title}
@@ -94,32 +94,32 @@ export default function FollowingPointerDemo() {
                 loading="lazy"
               />
             </div>
-            <div className="p-3 sm:p-4">
-              <h2 className="my-2 sm:my-4 text-base sm:text-lg font-bold text-[#333446] dark:text-[#EAEFEF]">
+            <div className="p-3 sm:p-4 flex flex-col flex-grow">
+              <h2 className="text-base sm:text-lg font-bold text-[#213555] dark:text-[#F5EFE7] mb-2">
                 {content.title}
               </h2>
-              <h2 className="my-2 sm:my-4 text-xs sm:text-sm font-normal text-[#7F8CAA] dark:text-[#B8CFCE]">
+              <p className="text-xs sm:text-sm font-normal text-[#3E5879] dark:text-[#D8C4B6] mb-4 line-clamp-3">
                 {content.description}
-              </h2>
-              <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+              </p>
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
                 {content.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-2 sm:px-3 py-1 text-xs font-medium rounded-full bg-[#B8CFCE] text-[#333446] dark:bg-[#7F8CAA] dark:text-[#EAEFEF]"
+                    className="px-2 sm:px-3 py-1 text-xs font-medium rounded-full bg-[#D8C4B6] text-[#213555] dark:bg-[#3E5879] dark:text-[#F5EFE7]"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-              <div className="mt-6 sm:mt-10 flex flex-row items-center justify-between">
-                <span className="text-xs sm:text-sm text-[#7F8CAA] dark:text-[#B8CFCE]">
+              <div className="mt-auto flex flex-row items-center justify-between">
+                <span className="text-xs sm:text-sm text-[#3E5879] dark:text-[#D8C4B6]">
                   {content.date}
                 </span>
                 <a
                   href={content.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative z-10 block rounded-lg sm:rounded-xl bg-[#333446] px-4 sm:px-6 py-1.5 sm:py-2 text-xs font-bold text-[#EAEFEF] hover:bg-[#7F8CAA] transition-colors active:scale-95"
+                  className="relative z-10 block rounded-lg sm:rounded-xl bg-[#213555] px-4 sm:px-6 py-1.5 sm:py-2 text-xs font-bold text-[#F5EFE7] hover:bg-[#3E5879] transition-colors active:scale-95"
                 >
                   Open Project
                 </a>
@@ -145,9 +145,9 @@ const TitleComponent = ({
       height="20"
       width="20"
       alt={`${title}'s avatar`}
-      className="rounded-full border-2 border-[#EAEFEF] w-5 h-5 sm:w-6 sm:h-6"
+      className="rounded-full border-2 border-[#F5EFE7] w-5 h-5 sm:w-6 sm:h-6"
     />
-    <p className="text-[#EAEFEF] text-sm sm:text-base">{title}</p>
+    <p className="text-[#F5EFE7] text-sm sm:text-base">{title}</p>
   </div>
 );
 

@@ -7,13 +7,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
+    <nav className="fixed w-full top-0 z-50 bg-[#F5EFE7]/80 dark:bg-[#213555]/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex-shrink-0 font-bold text-xl"
+            className="flex-shrink-0 font-bold text-xl text-[#213555] dark:text-[#F5EFE7]"
           >
             Bazley Tan's Portfolio
           </motion.div>
@@ -24,7 +24,7 @@ const Navbar = () => {
                 <Link
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-[#3E5879] dark:text-[#D8C4B6] hover:text-[#213555] dark:hover:text-[#F5EFE7] px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   {item}
                 </Link>
@@ -35,7 +35,7 @@ const Navbar = () => {
           <div className="sm:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-[#3E5879] dark:text-[#D8C4B6] hover:text-[#213555] dark:hover:text-[#F5EFE7] focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -67,7 +67,7 @@ const Navbar = () => {
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              className="text-[#3E5879] dark:text-[#D8C4B6] hover:text-[#213555] dark:hover:text-[#F5EFE7] block px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setIsOpen(false)}
             >
               {item}

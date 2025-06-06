@@ -4,7 +4,7 @@ import React from 'react';
 export default function ProfessionalExperience() {
   return (
     <section className="p-6">
-      <h2 className="text-3xl font-bold text-[#333446] dark:text-[#EAEFEF] mb-8 text-center md:text-left">
+      <h2 className="text-3xl font-bold text-[#213555] dark:text-[#F5EFE7] mb-8 text-center md:text-left">
         Professional Experience
       </h2>
 
@@ -12,20 +12,20 @@ export default function ProfessionalExperience() {
         {experienceData.map((experience, index) => (
           <div
             key={index}
-            className="bg-[#B8CFCE] dark:bg-[#7F8CAA] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            className="bg-[#D8C4B6] dark:bg-[#3E5879] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
           >
             <div className="flex items-start gap-6">
               <img
                 src={experience.image}
                 alt={experience.workName}
-                className="w-20 h-20 rounded-full object-cover border-2 border-[#333446] dark:border-[#EAEFEF] shadow-md"
+                className="w-20 h-20 rounded-full object-cover border-2 border-[#213555] dark:border-[#F5EFE7] shadow-md"
               />
               <div className="flex-1">
-                <h3 className="text-2xl font-semibold text-[#333446] dark:text-[#EAEFEF] mb-2">
+                <h3 className="text-2xl font-semibold text-[#213555] dark:text-[#F5EFE7] mb-2">
                   {experience.workName}
                 </h3>
-                <p className="text-[#333446] dark:text-[#EAEFEF] font-medium text-lg mb-3">{experience.role}</p>
-                <p className="text-[#7F8CAA] dark:text-[#B8CFCE] text-base leading-relaxed">
+                <p className="text-[#213555] dark:text-[#F5EFE7] font-medium text-lg mb-3">{experience.role}</p>
+                <p className="text-[#3E5879] dark:text-[#D8C4B6] text-base leading-relaxed">
                   {experience.description}
                 </p>
               </div>
