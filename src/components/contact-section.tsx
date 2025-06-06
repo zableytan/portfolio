@@ -1,8 +1,54 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('Sending...');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus('Message sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+      } else {
+        setStatus(`Error: ${data.message || 'Something went wrong.'}`);
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setStatus('Error: Could not send message.');
+    }
+  };
+
   return (
     <section id="contact" className="py-20 px-6 bg-[#F5EFE7] dark:bg-[#213555]">
       <div className="max-w-4xl mx-auto">
@@ -19,7 +65,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="bg-[#D8C4B6] dark:bg-[#3E5879] p-8 rounded-2xl shadow-lg"
           >
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-[#213555] dark:text-[#F5EFE7] mb-1">
                   Name
@@ -27,8 +73,11 @@ export default function ContactSection() {
                 <input
                   type="text"
                   id="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 rounded-lg bg-[#F5EFE7] dark:bg-[#213555] text-[#213555] dark:text-[#F5EFE7] border border-[#213555] dark:border-[#F5EFE7] focus:outline-none focus:ring-2 focus:ring-[#3E5879] dark:focus:ring-[#D8C4B6]"
                   placeholder="Your name"
+                  required
                 />
               </div>
               <div>
@@ -38,8 +87,11 @@ export default function ContactSection() {
                 <input
                   type="email"
                   id="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 rounded-lg bg-[#F5EFE7] dark:bg-[#213555] text-[#213555] dark:text-[#F5EFE7] border border-[#213555] dark:border-[#F5EFE7] focus:outline-none focus:ring-2 focus:ring-[#3E5879] dark:focus:ring-[#D8C4B6]"
                   placeholder="your.email@example.com"
+                  required
                 />
               </div>
               <div>
@@ -49,16 +101,25 @@ export default function ContactSection() {
                 <textarea
                   id="message"
                   rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 rounded-lg bg-[#F5EFE7] dark:bg-[#213555] text-[#213555] dark:text-[#F5EFE7] border border-[#213555] dark:border-[#F5EFE7] focus:outline-none focus:ring-2 focus:ring-[#3E5879] dark:focus:ring-[#D8C4B6]"
                   placeholder="Your message"
+                  required
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-[#213555] hover:bg-[#3E5879] text-[#F5EFE7] rounded-lg font-medium transition-colors"
+                disabled={status === 'Sending...'}
+                className="w-full px-6 py-3 bg-[#213555] hover:bg-[#3E5879] text-[#F5EFE7] rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {status === 'Sending...' ? 'Sending...' : 'Send Message'}
               </button>
+              {status && status !== 'Sending...' && (
+                <p className={`text-center text-sm ${status.startsWith('Error') ? 'text-red-600 dark:text-red-400' : 'text-green-600 dark:text-green-400'}`}>
+                  {status}
+                </p>
+              )}
             </form>
           </motion.div>
 
