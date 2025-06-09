@@ -4,7 +4,7 @@ import HeroSection from "@/components/hero-section";
 import ProfessionalExperience from "@/components/professional-experience";
 import TechnicalSkills from "@/components/technical-skills";
 import ContactSection from "@/components/contact-section";
-import CertificatesSection from "@/src/components/certificates-section";
+import CertificatesSection from "@/components/certificates-section";
 
 export default function Home() {
   return (
