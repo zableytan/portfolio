@@ -59,12 +59,14 @@ export default function HeroSection() {
               >
                 Contact Me
               </button>
-              <button 
-                onClick={scrollToProjects}
-                className="px-6 py-2 border border-[#D8C4B6] dark:border-[#3E5879] hover:bg-[#D8C4B6] dark:hover:bg-[#3E5879] rounded-full transition-colors"
+              <a 
+                href="/bazley_resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2 border border-[#D8C4B6] dark:border-[#3E5879] hover:bg-[#D8C4B6] dark:hover:bg-[#3E5879] rounded-full transition-colors inline-block text-[#213555] dark:text-[#F5EFE7]"
               >
-                My Work
-              </button>
+                Resume
+              </a>
             </motion.div>
           </div>
         </div>

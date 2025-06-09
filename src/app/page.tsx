@@ -3,6 +3,7 @@ import FollowingPointerDemo from "@/components/following-pointer-demo";
 import ProfessionalExperience from "@/components/professional-experience";
 import TechnicalSkills from "@/components/technical-skills";
 import ContactSection from "@/components/contact-section";
+import { CertificatesSection } from "@/components/certificates-section";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       </div>
       <ProfessionalExperience />
       <TechnicalSkills />
+      <CertificatesSection />
       <ContactSection />
     </main>
   );
