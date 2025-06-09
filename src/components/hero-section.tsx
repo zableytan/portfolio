@@ -60,7 +60,7 @@ export default function HeroSection() {
                 Contact Me
               </button>
               <a 
-                href="/Bazley_resume.pdf"
+                href="/Bazley_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2 border border-[#D8C4B6] dark:border-[#3E5879] hover:bg-[#D8C4B6] dark:hover:bg-[#3E5879] rounded-full transition-colors inline-block text-[#213555] dark:text-[#F5EFE7]"
