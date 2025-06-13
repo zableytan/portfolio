@@ -76,7 +76,7 @@ export default function FollowingPointerDemo() {
       title: "Capstone: FarmPrice App",
       description: "Created a mobile application that allows farmers to easily track and manage their livestock, providing real-time updates on their health and growth, and enabling them to make informed decisions about their farming operations.",
       image: "/theses.png",
-      authorAvatar: "/profile.jpg",
+      authorAvatar: "/farmprice.png",
       technologies: ["Flutter", "Firebase", "Dart"],
       link: "https://github.com/zableytan/Thesis_Library",
     },
