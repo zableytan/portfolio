@@ -78,7 +78,7 @@ export default function FollowingPointerDemo() {
       image: "/farmprice.png",
       authorAvatar: "/profile.jpg",
       technologies: ["Flutter", "Firebase", "Dart"],
-      link: "https://github.com/zableytan/Thesis_Library",
+      link: "https://github.com/zableytan/capstone_farmprice",
     },
   ];
 
