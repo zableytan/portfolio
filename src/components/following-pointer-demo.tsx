@@ -69,6 +69,17 @@ export default function FollowingPointerDemo() {
       technologies: ["PHP", "MySQL", "PDF.js", "JavaScript", "Tailwind CSS"],
       link: "https://github.com/zableytan/Thesis_Library",
     },
+    {
+      slug: "capstone-writing",
+      author: "Bazley Tan",
+      date: "December 2024",
+      title: "Capstone: FarmPrice App",
+      description: "Created a mobile application that allows farmers to easily track and manage their livestock, providing real-time updates on their health and growth, and enabling them to make informed decisions about their farming operations.",
+      image: "/theses.png",
+      authorAvatar: "/profile.jpg",
+      technologies: ["Flutter", "Firebase", "Dart"],
+      link: "https://github.com/zableytan/Thesis_Library",
+    },
   ];
 
   return (
